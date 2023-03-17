@@ -3,4 +3,14 @@ project(PageRanking)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(PageRanking main.cpp)
+
+set(Boost_INCLUDE_DIR C:/local/boost_1_81_0)
+set(Boost_LIBRARY_DIR C:/local/boost_1_81_0/stage/lib)
+
+find_package(Boost COMPONENTS REQUIRED)
+
+include_directories(${Boost_INCLUDE_DIR})
+link_directories(${Boost_LIBRARY_DIR})
+
+
+add_executable(PageRanking boot.cpp)

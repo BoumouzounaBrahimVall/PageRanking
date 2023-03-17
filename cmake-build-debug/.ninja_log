@@ -1,5 +1,15 @@
 # ninja log v5
-0	1385	6980277766313273	CMakeFiles/PageRanking.dir/main.cpp.obj	bc9476b8efc1ce4
-1390	1477	6980277767233415	PageRanking.exe	7f322808b3fd92c4
-5	1933	6981708834935902	CMakeFiles/PageRanking.dir/main.cpp.obj	bc9476b8efc1ce4
-1933	2057	6981708836164821	PageRanking.exe	7f322808b3fd92c4
+3	3501	7003720209799514	CMakeFiles/PageRanking.dir/main.cpp.obj	eff2812c6e1051a5
+3509	3695	7003720211758411	PageRanking.exe	422ecdd7f27c9af9
+1	5128	7007564082364422	CMakeFiles/PageRanking.dir/boot.cpp.obj	2d793feff88a52e0
+5139	6562	7007564096787125	PageRanking.exe	11ffac5e2bb3eb03
+25	5173	7007566837628538	CMakeFiles/PageRanking.dir/boot.cpp.obj	2d793feff88a52e0
+5173	6322	7007566849155922	PageRanking.exe	11ffac5e2bb3eb03
+19	5393	7007567057781602	CMakeFiles/PageRanking.dir/boot.cpp.obj	2d793feff88a52e0
+5393	6602	7007567069970290	PageRanking.exe	11ffac5e2bb3eb03
+16	4949	7007567256482143	CMakeFiles/PageRanking.dir/boot.cpp.obj	2d793feff88a52e0
+4953	6076	7007567267829630	PageRanking.exe	11ffac5e2bb3eb03
+15	4843	7007567438701941	CMakeFiles/PageRanking.dir/boot.cpp.obj	2d793feff88a52e0
+4843	5964	7007567450000451	PageRanking.exe	11ffac5e2bb3eb03
+15	5489	7007574271975616	CMakeFiles/PageRanking.dir/boot.cpp.obj	2d793feff88a52e0
+5489	6632	7007574283476747	PageRanking.exe	11ffac5e2bb3eb03
