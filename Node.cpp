@@ -29,17 +29,4 @@ void Node<T>::setScore(double scre) {
     Node::score = scre;
 }
 
-template<class T>
-const vector<Node<T>> &Node<T>::getAgencyListe() const {
-    return agency_liste;
-}
 
-template<class T>
-void Node<T>::setAgencyListe(const vector<Node> &agencyListe) {
-    agency_liste = agencyListe;
-}
-
-template<class T>
-void Node<T>::add_agencyElement(Node<T> &elem) {
-    this->agency_liste.insert(elem);
-}
