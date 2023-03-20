@@ -1,8 +1,4 @@
-//
-// Created by S USER on 3/19/2023.
-//
 
-//#include "PageRankGraph.h"
 #include <boost/graph/page_rank.hpp>
 #include <boost/graph/adjacency_list.hpp>
 #include <boost/graph/graphviz.hpp>
