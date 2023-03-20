@@ -6,6 +6,7 @@
 #include <vector>
 
 using namespace boost;
+using namespace std;
 
 struct Node {
     double longitude;
@@ -33,7 +34,7 @@ double calculate_distance(Node n1, Node n2) {
     return distance;
 }
 
-std::vector<Node> read_excel_file(std::string filename) {
+std::vector<Node> read_excel_file(const std::string& filename) {
     std::vector<Node> nodes;
     std::ifstream input_file(filename);
 
@@ -66,23 +67,46 @@ std::vector<Node> read_excel_file(std::string filename) {
     }
     return nodes;
 }
+
+vector<Node> read_csv_and_write_specific_columns(const string&  input_file_path) {
+    ifstream input_file(input_file_path);
+    string line;
+    vector<Node> nodes{};
+    int i =0;
+    while (getline(input_file, line)) {
+        stringstream line_stream(line);
+        string cell;
+        vector<string> cells;
+
+        while (getline(line_stream, cell, ',')) {
+            cells.push_back(cell);
+        }
+        if(i==0) {i=1;}
+        else {
+            Node n = {stof(cells[2]), stof(cells[1]), stof(cells[3])};
+            cout<<"Node:{ lat: "<<n.latitude<<" lon:"<<n.longitude<<" price: "<<n.house_price<<endl;
+            nodes.push_back(n);
+        }
+        i++;
+        cout<<i<<endl;
+        if(i==1000) break;
+    }
+    input_file.close();
+    return nodes;
+}
+
+
 int main() {
     // read data from excel file
-    std::vector<Node> nodes{{-68.356499,-31.531609,200},
-                            {-57.8884417892,-34.3844451916,80000},
-                            {-64.9891220943,-32.4057514071,6000},
-                            {465.897515,-27.371215,6000},
-                            {45.385746,-24.830049,78000}}; //= read_excel_file(R"(C:\Users\S USER\Downloads\testvall.xlsx)");
-
-
+    std::vector<Node> nodes = read_csv_and_write_specific_columns(R"(C:\Users\S USER\Downloads\cleanTest.csv)");
     // create the graph
     Graph g(nodes.size());
 
     // add edges between nodes within 10 km of each other
-    for (int i = 0; i < nodes.size(); i++) {
-        for (int j = i+1; j < nodes.size(); j++) {
+    for (long i = 0; i < nodes.size(); i++) {
+        for (long j = i+1; j < nodes.size(); j++) {
             double distance = calculate_distance(nodes[i], nodes[j]);
-            if (distance <= 70000000) {
+            if (distance <= 10) {
                 Edge e(i, j);
                 add_edge(e.first, e.second, g);
             }

@@ -49,8 +49,8 @@ cmake_ninja_workdir = C$:/Users/S$ USER/Documents/TP$ C++/PageRanking/cmake-buil
 
 build cmake_object_order_depends_target_PageRanking: phony || CMakeFiles/PageRanking.dir
 
-build CMakeFiles/PageRanking.dir/boot.cpp.obj: CXX_COMPILER__PageRanking_Debug C$:/Users/S$ USER/Documents/TP$ C++/PageRanking/boot.cpp || cmake_object_order_depends_target_PageRanking
-  DEP_FILE = CMakeFiles\PageRanking.dir\boot.cpp.obj.d
+build CMakeFiles/PageRanking.dir/main.cpp.obj: CXX_COMPILER__PageRanking_Debug C$:/Users/S$ USER/Documents/TP$ C++/PageRanking/main.cpp || cmake_object_order_depends_target_PageRanking
+  DEP_FILE = CMakeFiles\PageRanking.dir\main.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   INCLUDES = -IC:/local/boost_1_81_0
   OBJECT_DIR = CMakeFiles\PageRanking.dir
@@ -64,7 +64,7 @@ build CMakeFiles/PageRanking.dir/boot.cpp.obj: CXX_COMPILER__PageRanking_Debug C
 #############################################
 # Link the executable PageRanking.exe
 
-build PageRanking.exe: CXX_EXECUTABLE_LINKER__PageRanking_Debug CMakeFiles/PageRanking.dir/boot.cpp.obj
+build PageRanking.exe: CXX_EXECUTABLE_LINKER__PageRanking_Debug CMakeFiles/PageRanking.dir/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -LC:/local/boost_1_81_0/stage/lib
