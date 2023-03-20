@@ -3,30 +3,9 @@
 //
 
 #include "Node.h"
-
-template<class T>
- Node<T>::Node(T dt) {
-    data=dt;
-    score=0;
-}
-template<class T>
-T Node<T>::getData() const {
-    return data;
-}
-
-template<class T>
-void Node<T>::setData(T dt) {
-    Node::data = dt;
-}
-
-template<class T>
-double Node<T>::getScore() const {
-    return score;
-}
-
-template<class T>
-void Node<T>::setScore(double scre) {
-    Node::score = scre;
-}
-
-
+double Node::getLongitude() const { return longitude; }
+double Node::getLatitude() const { return latitude; }
+double Node::getHousePrice() const { return house_price; }
+const string & Node::getId() const {return id;}
+const string & Node::getCurrency() const {return currency;}
+const string & Node::getCountry() const {return country;}

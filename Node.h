@@ -29,12 +29,12 @@ public:
     Node(string& id, double latitude,double longitude, double house_price,string& currency,string& country)
             : id(id),latitude(latitude), longitude(longitude), house_price(house_price),currency(currency),country(country) {}
 
-    double getLongitude() const { return longitude; }
-    double getLatitude() const { return latitude; }
-    double getHousePrice() const { return house_price; }
-    const string &getId() const {return id;}
-    const string &getCurrency() const {return currency;}
-    const string &getCountry() const {return country;}
+    double getLongitude() const ;
+    double getLatitude() const ;
+    double getHousePrice() const ;
+    const string &getId() const ;
+    const string &getCurrency() const;
+    const string &getCountry() const ;
 };
 
 
