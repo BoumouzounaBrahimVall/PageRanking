@@ -12,7 +12,7 @@ private:
 public:
     explicit GraphBuilder(vector<Node>& nodes) : nodes(nodes), g(nodes.size()) {}
     static double calculate_distance(Node , Node );
-    void buildGraph() ;
+    void buildGraph(int ) ;
     vector<Node> getNodes() const ;
     Graph getGraph() const ;
 };

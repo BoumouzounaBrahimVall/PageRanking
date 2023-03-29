@@ -10,6 +10,7 @@
 #include <cmath>
 #include <fstream>
 #include <vector>
+#include <iostream>
 using namespace boost;
 using namespace std;
 typedef std::pair<int, int> Edge;
@@ -27,7 +28,7 @@ private:
 
 public:
     Node(string& id, double latitude,double longitude, double house_price,string& currency,string& country)
-            : id(id),latitude(latitude), longitude(longitude), house_price(house_price),currency(currency),country(country) {}
+    : id(id),latitude(latitude), longitude(longitude), house_price(house_price),currency(currency),country(country) {}
 
     double getLongitude() const ;
     double getLatitude() const ;
