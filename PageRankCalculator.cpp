@@ -11,9 +11,6 @@ vector<double> PageRankCalculator::calculatePageRank(Graph g) {
 
     rank_vec.insert(rank_vec.begin(),all_page_rank.begin(),all_page_rank.end());
     all_page_rank=rank_vec;
-
-    //  node.insert(node.begin(),nodes.begin(),nodes.end());
-    // nodes=node;
     return rank_vec;
 }
 void PageRankCalculator::printPageRank() {

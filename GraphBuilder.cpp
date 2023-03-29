@@ -3,6 +3,7 @@
 //
 
 #include "GraphBuilder.h"
+//Haversin formula
  double GraphBuilder::calculate_distance(Node n1, Node n2) {
     double earth_radius = 6371; // km
     double lat1 = n1.getLatitude() * M_PI / 180.0;
@@ -18,7 +19,7 @@
     double distance = earth_radius * c;
     return distance;
 }
-void GraphBuilder::buildGraph() {
+void GraphBuilder::buildGraph(int dist=10) {
     // add edges between nodes within 10 km of each other
     for (long i = 0; i < nodes.size(); i++) {
         for (long j = i + 1; j < nodes.size(); j++) {

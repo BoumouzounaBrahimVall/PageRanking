@@ -1,5 +1,3 @@
-
-
 #include "FileReader.h"
  PageRankCalculator FileReader::read_csv_optimal(const string& input_file_path,const string& output_file_path) {
     ifstream input_file(input_file_path);
@@ -23,7 +21,7 @@
             i = 1; }
         else {
             Node n(cells[0],stof(cells[1]), stof(cells[2]), stof(cells[3]),cells[4],cells[5]);
-            //  cout << "Node:{ lat: " << n.getLatitude() << " lon:" << n.getLongitude() << " price: " << n.getHousePrice() <<" }"<<endl;
+             cout << "Node:{ lat: " << n.getLatitude() << " lon:" << n.getLongitude() << " price: " << n.getHousePrice() <<" }"<<endl;
             nodes.push_back(n);
         }
         i++;
@@ -34,11 +32,12 @@
             vector<double> pg=pageCal.calculatePageRank(graphBuilder.getGraph());
             for(int j=0;j<nodes.size();j++) {
                 output_file<<nodes[j].getId()<<","<<nodes[j].getLatitude()<<","<<nodes[j].getLongitude()
-                           <<","<<nodes[j].getHousePrice()<<","<<nodes[j].getCurrency()<<","<<nodes[j].getCountry()<<","<<pg[j]<<endl;
+                           <<","<<nodes[j].getHousePrice()<<","<<nodes[j].getCurrency()<<","
+                           <<nodes[j].getCountry()<<","<<pg[j]<<endl;
             }
             nodes.clear(); // clear the nodes vector to free up memory
         }
-        //  if(i==3000) break;
+          if(i==100000) break;
     }
     // process the remaining nodes
     if (!nodes.empty()) {
